@@ -15,4 +15,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "BamDesign"
 include(":app")
- 
+include(":components")
