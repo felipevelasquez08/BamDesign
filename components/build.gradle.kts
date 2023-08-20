@@ -40,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation("androidx.core:core-ktx:1.9.0")
     implementation(platform("androidx.compose:compose-bom:2023.03.00"))
     implementation("androidx.compose.ui:ui")
@@ -48,13 +47,12 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 }
-
 publishing {
     publications {
-        create<MavenPublication>("release") {
+        create<MavenPublication>("bam-design") {
             groupId = "com.alternova.components"
-            artifactId = "components"
-            version = "0.0.1"
+            artifactId = "bam-design"
+            version = "0.0.2"
         }
     }
 }
