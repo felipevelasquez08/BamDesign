@@ -54,7 +54,7 @@ afterEvaluate{
             create<MavenPublication>("bam-design") {
                 groupId = "com.alternova.components"
                 artifactId = "bam-design"
-                version = "0.0.2"
+                version = "0.0.5"
             }
         }
     }
