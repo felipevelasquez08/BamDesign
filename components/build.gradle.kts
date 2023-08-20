@@ -61,5 +61,5 @@ afterEvaluate{
 }
 
 tasks.named("publishToMavenLocal") {
-    dependsOn("assemble")
+    dependsOn("build")
 }
