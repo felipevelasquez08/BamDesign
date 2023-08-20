@@ -47,12 +47,19 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 }
-publishing {
-    publications {
-        create<MavenPublication>("bam-design") {
-            groupId = "com.alternova.components"
-            artifactId = "bam-design"
-            version = "0.0.2"
+
+afterEvaluate{
+    publishing {
+        publications {
+            create<MavenPublication>("bam-design") {
+                groupId = "com.alternova.components"
+                artifactId = "bam-design"
+                version = "0.0.2"
+            }
         }
     }
+}
+
+tasks.named("publishToMavenLocal") {
+    dependsOn("assemble")
 }
