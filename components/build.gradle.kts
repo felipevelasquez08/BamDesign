@@ -53,7 +53,7 @@ publishing {
         create<MavenPublication>("bam-design") {
             groupId = "com.alternova.components"
             artifactId = "bam-design"
-            version = "0.0.5"
+            version = "0.0.7"
             afterEvaluate {
                 from(components["release"])
             }
