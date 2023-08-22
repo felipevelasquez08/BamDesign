@@ -48,18 +48,15 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 }
 
-afterEvaluate{
-    publishing {
-        publications {
-            create<MavenPublication>("bam-design") {
-                groupId = "com.alternova.components"
-                artifactId = "bam-design"
-                version = "0.0.5"
+publishing {
+    publications {
+        create<MavenPublication>("bam-design") {
+            groupId = "com.alternova.components"
+            artifactId = "bam-design"
+            version = "0.0.5"
+            afterEvaluate {
+                from(components["release"])
             }
         }
     }
-}
-
-tasks.named("publishToMavenLocal") {
-    dependsOn("build")
 }
