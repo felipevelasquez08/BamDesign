@@ -37,6 +37,13 @@ android {
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
     }
+    android {
+        publishing {
+            singleVariant("release") {
+                withSourcesJar()
+            }
+        }
+    }
 }
 
 dependencies {
@@ -53,7 +60,7 @@ publishing {
         create<MavenPublication>("bam-design") {
             groupId = "com.alternova.components"
             artifactId = "bam-design"
-            version = "0.0.7"
+            version = "0.0.8"
             afterEvaluate {
                 from(components["release"])
             }
