@@ -21,7 +21,7 @@ import com.alternova.components.ui.theme.multiplier_x36
 import com.alternova.components.ui.theme.multiplier_x4
 
 @Composable
-fun LoadingScreen() {
+fun LoadingBam() {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -48,5 +48,5 @@ fun LoadingScreen() {
 @Composable
 @Preview(showSystemUi = true)
 private fun LoadingScreenPreview() {
-    LoadingScreen()
+    LoadingBam()
 }
